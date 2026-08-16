@@ -1,0 +1,129 @@
+.detail-gallery {
+    align-self: start;
+    display: grid;
+    gap: 14px;
+}
+
+.detail-thumbs {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+}
+
+.detail-thumbs button {
+    aspect-ratio: 1 / 1;
+    background: #fff;
+    border: 1px solid #eadbc1;
+    border-radius: 16px;
+    cursor: pointer;
+    padding: 8px;
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.detail-thumbs button:hover,
+.detail-thumbs button.active {
+    border-color: var(--brand-primary);
+    box-shadow: 0 10px 24px rgba(105, 70, 24, .14);
+    transform: translateY(-1px);
+}
+
+.detail-thumbs img {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+
+.image-placeholder {
+    color: #9b7a45;
+    font-weight: 900;
+}
+
+.variation-head {
+    align-items: end;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.variation-head strong {
+    font-size: 18px;
+}
+
+.variation-head small {
+    color: #8f6332;
+    font-weight: 900;
+    text-align: right;
+}
+
+.variation-list button {
+    align-items: center;
+    background: #fffdfa;
+    border: 1px solid #eee4d2;
+    border-radius: 16px;
+    column-gap: 12px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 10px;
+    text-align: left;
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.variation-list button:hover,
+.variation-list button.active {
+    border-color: var(--brand-primary);
+    box-shadow: 0 12px 24px rgba(105, 70, 24, .12);
+    transform: translateY(-1px);
+}
+
+.variation-list button.active {
+    background: #fff8ec;
+}
+
+.variation-list button img,
+.variation-empty {
+    background: #f6f2ea;
+    border-radius: 12px;
+    grid-row: 1 / 4;
+    height: 58px;
+    object-fit: contain;
+    padding: 4px;
+    width: 58px;
+}
+
+.variation-list button strong {
+    color: #9a6a2d;
+    font-size: 13px;
+}
+
+.variation-list button span {
+    color: #20170f;
+    font-weight: 900;
+    line-height: 1.18;
+}
+
+.variation-list button small {
+    font-size: 12px;
+}
+
+@media (max-width: 560px) {
+    .detail-thumbs {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .variation-list {
+        grid-template-columns: 1fr;
+    }
+
+    .variation-head {
+        display: block;
+    }
+
+    .variation-head small {
+        display: block;
+        margin-top: 4px;
+        text-align: left;
+    }
+}
